@@ -1,6 +1,165 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-* {
-	box-sizing: border-box;
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+.movies {
+	background-color: #f2f2f2;
+	width: 100%;
+}
+
+.header {
+	background-attachment: fixed;
+	background-image: url('../img/capa-madmax2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+	width: 100%;
+}
+
+.header::after {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+	content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.header-nav {
+	z-index: 2;
+	display: flex;
+}
+
+.header-nav .container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-nav-menu {
+	display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-item {
+    margin: 0 25px;
+}
+
+.header-nav-item a, .movies-nav-menu-item a {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-image {
+	border-radius: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    height: 45px;
+    margin-right: 15px;
+    overflow: hidden;
+    width: 45px;
+}
+
+.header-nav-profile {
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-image img {
+	width: 100%;
+    height: auto;
+}
+
+.profile-name {
+	color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.header-content {
+	width: 100%;
+}
+
+.header-content .container {
+    position: relative;
+    z-index: 2;
+}
+
+.header-title {
+    color: #fff;
+    font-size: 6.5em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header-genre {
+    display: flex;
+    margin: 15px 0 30px;
+    font-size: 13px;
+}
+
+.genre-item {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-nav-item a:hover, .genre-item:hover {
+    color: #e4bb23;
+}
+
+.header-trailer-button {
+	display: inline-block;
+    padding: 15px 50px;
+    color: #000;
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #e4bb23;
+    border-radius: 40px;
+    position: relative;
+	transition: all 0.2s ease-in-out;
+	align-items: center;
+}
+
+.header-trailer-button i {
+	font-size: 1.5em;
+    position: absolute;
+    right: 20px;
+	top: 12px;
+	align-items: center;
+}
+
+.header-trailer-button:hover {
+    background-color: #bc9a1d;
+}
+
+.header-infos {
+	padding: 20px 0;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.header-infos p:last-child {
+    color: #bc9a1d;
 }

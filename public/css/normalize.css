@@ -422,3 +422,20 @@ td,
 th {
   padding: 0;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	background-color: transparent;
+}
