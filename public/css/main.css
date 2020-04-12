@@ -7,11 +7,6 @@
     width: 960px;
 }
 
-.movies {
-	background-color: #f2f2f2;
-	width: 100%;
-}
-
 .header {
 	background-attachment: fixed;
 	background-image: url('../img/capa-madmax2.jpg');
@@ -162,4 +157,163 @@
 
 .header-infos p:last-child {
     color: #bc9a1d;
+}
+
+.movies {
+	background-color: #f2f2f2;
+	width: 100%;
+}
+
+.movies-menu {
+	width: 100%;
+}
+
+.movies-nav-menu {
+	align-items: center;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.movies-nav-menu-item {
+	margin: 0 20px;
+}
+
+.movies-nav-menu-item a {
+	padding: 25px 0;
+	display: inline-block;
+	color: #e4bb23;
+}
+
+.movies-list {
+	width: 100%;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.movies-list-item {
+	width: 24%;
+	margin-bottom: 30px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	/* height: auto; */
+}
+
+.movies-list-item:hover .movie-poster-info {
+	opacity: 1;
+    visibility: visible;
+}
+
+.movie-poster-info {
+	align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 80px 20px;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    height: calc(100% - 2px);
+    z-index: 1;
+}
+
+.movie-poster-info h3 {
+	color: #e4bb23;
+    font-size: 2em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.movie-poster-link {
+	color: #fff;
+    font-size: 5em;
+    transition: all 0.2s ease-in-out;
+}
+
+.movie-poster {
+	margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-poster img{
+    width: 100%;
+}
+
+.movie-sinopse {
+	padding: 10px;
+	width: 100%;
+}
+
+.movie-sinopse-title {
+	font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.movie-sinopse-genre {
+	margin: 10px 0;
+    display: flex;
+}
+
+.sinopse-genre-item {
+	text-decoration: none;
+    font-size: 1.2em;
+    color: #e4bb23;
+}
+
+.sinopse-genre-item:hover {
+	text-decoration: underline;
+}
+/* 
+.sinopse-genre-item:hover:not(::after) {
+	text-decoration: underline;
+} */
+
+.sinopse-genre-item::after {
+	content: ",\00a0";
+	text-decoration: none;
+}
+
+.sinopse-genre-item:last-child::after{
+	content: "";
+	text-decoration: none
+}
+
+.movie-score {
+	margin: 0;
+    align-items: center;
+    display: flex;
+    font-size: 2em;
+    font-weight: bold;
+	justify-content: space-between;
+	color: #444;
+}
+
+.movie-score i {
+	color: #ccc;
+    cursor: pointer;
 }
